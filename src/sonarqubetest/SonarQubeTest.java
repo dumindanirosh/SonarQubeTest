@@ -15,15 +15,23 @@ public class SonarQubeTest {
      * @param args the command line arguments
      */
     public static void main(String[] args) {
-       
-        TestSevice  s = new TestSevice();
+
+        TestSevice s = new TestSevice();
         Subject subjectDO = s.getSub();
         TestP resetValidityDO = s.getTestP();
-       
-        	if((resetValidityDO != null && resetValidityDO.getTime() != null) && subjectDO != null){
-                    System.out.println("hihihihi");
-                }
-			
+
+        if ((resetValidityDO != null && resetValidityDO.getTime() != null) && subjectDO != null) {
+            System.out.println("hihihihi");
+        }
+        
+        SonarQubeTest obj = new SonarQubeTest();
+        obj.m();
+
     }
-    
+    TestSevice s2;
+
+    public void m() {
+        s2.getSub();
+    }
+
 }
